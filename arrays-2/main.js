@@ -14,27 +14,39 @@ const topArtist =[
 "Rey Charles"  
 ]
 console.log(topArtist)
+const arrayUser = []
+
+function rellenar() {
+    for (let i=0; i < arrayUser.length; i++){
+        
+    }    
+}
 
 function topUserInput() {
     let listBand = document.getElementsByClassName("topUser") 
-    let arrayUser = []
     for (let i=0; i < listBand.length; i++){
         arrayUser[i] = listBand[i].value
         console.log (listBand[i].value)
     }
 } 
 
-
-
+function mostrarTodos() {
+    arrayUser.forEach(function(artist, index){
+    let listItem = document.getElementById("top" + index);
+    listItem.textContent = artist;
+    } )
+};
 
 function borrarPrimerElemento() {
-    topArtist.shift()
-    console.log(topArtist)
+    arrayUser.shift()
+    console.log(arrayUser)
+    mostrarTodos()
 };
 
 function borrarUltimoElemento() {
-    topArtist.pop()
-    console.log(topArtist)
+    arrayUser.pop()
+    console.log(arrayUser)
+    mostrarTodos()
 }
 
 function cambiarIndice() {
@@ -52,12 +64,7 @@ function mostrarIndice() {
     console.log(topArtist[indice])
 }
 
-function mostrarTodos() {
-    topArtist.forEach(mostrar)
-    function mostrar() {
-        
-        console.log()
-    }
-}
 
+function mostrar() {        
+    console.log()}
 
